@@ -103,7 +103,8 @@ if __name__ == "__main__":
     
     if steering_matrix_or_vector is not None:
         model.set_steering_parameters(
-            steering_matrix_or_vector=steering_matrix_or_vector,
+            # steering_matrix_or_vector=steering_matrix_or_vector, # it can be steering_vector or steering_matrix
+            steering_matrix_or_vector,
             strength=strength
         )
     else:

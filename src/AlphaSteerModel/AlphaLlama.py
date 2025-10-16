@@ -8,9 +8,9 @@ from transformers import LlamaForCausalLM, LlamaModel, LlamaConfig
 from transformers.models.llama.modeling_llama import LlamaDecoderLayer
 
 # Add these imports
-from typing import Optional, Tuple, Union, List, Dict, Unpack
+from typing import Optional, Tuple, Union, List, Dict #, Unpack
 from transformers.cache_utils import Cache
-from transformers.models.llama.modeling_llama import FlashAttentionKwargs
+# from transformers.models.llama.modeling_llama import FlashAttentionKwargs
 
 # Configure logging
 logging.basicConfig(
@@ -67,7 +67,8 @@ class AlphaLlamaDecoderLayer(LlamaDecoderLayer):
         use_cache: Optional[bool] = False,
         cache_position: Optional[torch.LongTensor] = None,
         position_embeddings: Optional[Tuple[torch.Tensor, torch.Tensor]] = None,
-        **kwargs: Unpack[FlashAttentionKwargs],
+        # **kwargs: Unpack[FlashAttentionKwargs],
+        **kwargs,
     ) -> Tuple[torch.FloatTensor, Optional[Tuple[torch.FloatTensor, torch.FloatTensor]]]:
         
         # Ensure steering_matrix is on the same device as hidden_states
