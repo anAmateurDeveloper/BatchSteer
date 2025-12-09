@@ -1,10 +1,3 @@
-# cast_antidote.py
-"""
-CAST-style corrective antidote data generator for fairness (binary classification, binary sensitive).
-Dependencies: torch, numpy, scikit-learn
-Run: python cast_antidote.py
-"""
-
 import copy
 import numpy as np
 import torch
